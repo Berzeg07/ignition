@@ -1,1 +1,94 @@
-p Шапка
+.header.container
+    .header__top
+        .header__column
+            .logo-block
+                .logo
+                    img(src="img/logo.png" width="60" height="60")
+                ul.logo-article
+                    li Ключи зажигания
+                    li изготовление ключей и ремонт замков
+
+        .header__column
+            ul.main-menu
+                li
+                    a(href="#") О компании
+                li
+                    a(href="#") Наши мастера
+                li
+                    a(href="#") Цены на ремонт
+                li
+                    a(href="#") Контакты
+
+        .header__column
+            button(type="button").btngreen Вызвать мастера
+
+            ul.phone-block
+                li
+                    a(href="tel:84952668525").phone-recall 8 495 266-85-25
+                li
+                    span.phone-article звоните ежедневно 24/7
+
+    .header__botom
+        .header__column
+            button(type="button").menubtn
+            form.search(action="#")
+                input(type="text" placeholder="Например сделать ключ BMW X6").inp-search
+                button(type="submit").btngreen Найти
+
+        .header__column
+            ul.header-nav
+                li
+                    a(href="#") Сделать дубликат ключа
+                li
+                    a(href="#") Изготовление чипа ключа
+                li
+                    a(href="#") Ремонт замка зажигания
+
+.dropdownmenu
+    .dropdownmenu__column
+        .dropdownmenu__title Популярные
+        +markList
+
+    .dropdownmenu__column
+        .dropdownmenu__title Японские
+        +markList
+
+    .dropdownmenu__column
+        .dropdownmenu__title Американские
+        +markList
+
+    .dropdownmenu__column
+        .dropdownmenu__title Немецкие
+        +markList
+
+    .dropdownmenu__column
+        .dropdownmenu__title Европейские
+        +markList
+
+    .dropdownmenu__column
+        .dropdownmenu__title Корейские
+        +markList
+
+    .dropdownmenu__column
+        .dropdownmenu__title Китайские
+        +markList
+
+.headermob
+    .headermob__column
+        button(type="button").burgermob
+        ul.logo-article
+            li Ключи зажигания
+            li изготовление ключей и ремонт замков
+
+    .headermob__column
+        ul.phone-block
+            li
+                a(href="tel:84952668525").phone-recall 8 495 266-85-25
+            li
+                span.phone-article звоните ежедневно 24/7
+
+    .headermob__column
+        form(action="#").searchhmob
+            input(type="text" placeholder="Например сделать ключ BMW X6").inp-search
+
+

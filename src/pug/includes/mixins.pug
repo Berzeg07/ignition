@@ -2,3 +2,142 @@ mixin icon(name,mod)
 	- mod = mod || ''
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="/img/svg/sprite.svg#" + name)
+
+mixin tabItem(tabId)
+	.tabcontent__item(id=tabId)
+		ul.formloan__list
+			li
+				.formloan__sub-title Марка автомобиля
+				.selectcustom
+					select
+						option Mersedes
+						option Audi
+						option Toyota
+			li
+				.formloan__sub-title Модель автомобиля
+				.selectcustom
+					select
+						option A7
+						option A8
+			li
+				.formloan__sub-title Год выпуска
+				.selectcustom
+					select
+						option 1990 г
+						option 2000 г
+			li
+				.formloan__sub-title Вид неисправности
+				.selectcustom
+					select
+						option Изготовление ключа
+						option тест
+			li
+				button(type="submit").formloan__btn Отправить заявку
+
+mixin teamSliderItem(img, photo, name)
+	.swiper-slide
+		.team-slider__item
+			.team-slider__img
+				img(src="img/" + img)
+
+			ul.team-slider__member
+				li
+					.team-slider__photo
+						img(src="img/" + photo)
+				li
+					.team-slider__name= name
+
+					ul.team-slider__revlist
+						li
+							.team-slider__star
+								img(src="img/star.png" width="20" height="20")
+								b 4.8
+						li
+							.team-slider__rev
+								img(src="img/rev-icon.png" width="20" height="20")
+
+			.team-slider__article 
+				|Специалисты по ремонту широкого профиля с опытом работы более 10 лет. 
+				|Ремонтируем в буквальном смысле всё
+
+			button(type="button").btngreen Бесплатный выезд мастера
+
+mixin serviceTable
+	tr
+		td
+			a(href="#").tableservice__link Изготовление нового ключа
+		td
+			.tableservice__article 1200 ₽
+		td
+			.tableservice__article от 40 мин.
+		td
+			button(type="button").btngreen Вызвать мастера
+
+mixin markSlides(img, name)
+	.swiper-slide
+		.mark-slider__item 
+			.mark-slider__action Бесплатный выезд мастера
+
+			.mark-slider__img
+				img(src="img/" + img width="200" height="125")
+
+			a(href="#").mark-slider__link= name
+
+			ul.priceinfo
+				li
+					.priceinfo__price
+						span от
+						b 1 200 ₽
+				li
+					.priceinfo__time
+						b ~ 40 
+						span мин.
+
+			button(type="buton") Вызвать мастера
+
+mixin markList
+	ul.mark-list
+		li
+			.mark-list__icon
+				img(src="img/m1.png" width="24" height="24")
+			a(href="#") Audi
+		li
+			.mark-list__icon
+				img(src="img/m2.png" width="24" height="24")
+			a(href="#") BMW
+		li
+			.mark-list__icon
+				img(src="img/m3.png" width="24" height="24")
+			a(href="#") Mersedes
+		li
+			.mark-list__icon
+				img(src="img/m4.png" width="24" height="24")
+			a(href="#") Volkswagen
+		li
+			.mark-list__icon
+				img(src="img/m5.png" width="24" height="24")
+			a(href="#") Toyota
+		li
+			.mark-list__icon
+				img(src="img/m6.png" width="24" height="24")
+			a(href="#") Kia
+		li
+			.mark-list__icon
+				img(src="img/m7.png" width="24" height="24")
+			a(href="#") Peugeot
+		li
+			.mark-list__icon
+				img(src="img/m8.png" width="24" height="24")
+			a(href="#") Hunday
+		li
+			.mark-list__icon
+				img(src="img/m9.png" width="24" height="24")
+			a(href="#") Reno
+		li
+			.mark-list__icon
+				img(src="img/m10.png" width="24" height="24")
+			a(href="#") Mazda
+		li
+			.mark-list__icon
+				img(src="img/m11.png" width="24" height="24")
+			a(href="#") Mitsubishu

@@ -1,1 +1,216 @@
-p Контент
+.tabblock.container
+    .tabblock__title По-настоящему быстрый способ сделать новый ключ для автомобиля
+
+    .tabbuttons
+        .tabbuttons__item
+            .tabbuttons__img
+                img(src="img/key-1.png" width="106" height="130")
+            .tabbuttons__article
+                .tabbuttons__title Новый ключ для автомобиля
+                ul.priceinfo
+                    li
+                        .priceinfo__price
+                            span от
+                            b 1 200 ₽
+                    li
+                        .priceinfo__time
+                            b ~ 40 
+                            span мин.
+
+        .tabbuttons__item
+            .tabbuttons__img
+                img(src="img/key-2.png" width="130" height="130")
+            .tabbuttons__article
+                .tabbuttons__title Новый чип ключ
+                ul.priceinfo
+                    li
+                        .priceinfo__price
+                            span от
+                            b 1 200 ₽
+                    li
+                        .priceinfo__time
+                            b ~ 40 
+                            span мин.
+
+        .tabbuttons__item
+            .tabbuttons__img
+                img(src="img/key-3.png" width="145" height="130")
+            .tabbuttons__article
+                .tabbuttons__title Ремонт замка зажигания
+                ul.priceinfo
+                    li
+                        .priceinfo__price
+                            span от
+                            b 1 200 ₽
+                    li
+                        .priceinfo__time
+                            b ~ 40 
+                            span мин.
+
+    form(action="#").formloan.tabcontent
+        +tabItem('tab1')
+        +tabItem('tab2')
+        +tabItem('tab3')
+
+.topcont.container
+    h1.maintitle Изготовление ключей с выездом по всей Москве
+    .conttxt
+        p Допустим, вы приобрели автомобиль только с одним комплектом ключей, 
+        |закажите себе их вторые экземпляры, не откладывая дело в долгий ящик! 
+        |Запасной автоключ всегда пригодится. В случае полной утраты всех ключей от 
+        |автомобиля рекомендуем, не теряя времени, воспользоваться нашими услугами. 
+        |Не стоит искушать судьбу – вдруг потерянные ключи достанутся злоумышленникам?
+
+    h2.maintitle Ключи для всех популярных моделей автомобилей
+
+    .mark-slider-wrap
+        .mark-slider.swiper-container
+            .swiper-wrapper
+                +markSlides('car-1.png', 'Audi')
+                +markSlides('car-2.png', 'Bmw')
+                +markSlides('car-3.png', 'Ford')
+                +markSlides('car-4.png', 'Honda')
+                +markSlides('car-5.png', 'Mersedes')
+
+            .swiper-pagination
+
+        .swiper-button-next.mark-slider__next
+        .swiper-button-prev.mark-slider__prev
+
+.serviceblock.container
+    h2.maintitle Наши услуги и стоимость
+
+    .serviceblock__item
+        .serviceblock__column
+            ul.service-list
+                li
+                    .service-list__img
+                        img(src="img/half-1.png")
+
+                    .service-list__article
+                        .service-list__title Новый ключ
+                        .service-list__sub-title для автомобиля
+                        .service-list__price от 1 200₽
+
+                li
+                    .service-list__img
+                        img(src="img/half-2.png")
+
+                    .service-list__article
+                        .service-list__title Чип ключ
+                        .service-list__sub-title для автомобиля
+                        .service-list__price от 1 500₽
+
+                li
+                    .service-list__img
+                        img(src="img/half-3.png")
+
+                    .service-list__article
+                        .service-list__title Замок зажигания
+                        .service-list__sub-title для автомобиля
+                        .service-list__price от 2 500₽
+
+        .serviceblock__column
+            table.tableservice
+                thead
+                    tr
+                        th Наименование услуги
+                        th Стоимость
+                        th Время ремонта
+                tbody
+                    - for(var x = 0; x < 14; x++)
+                        +serviceTable
+
+.aboutservice
+    h2.maintitle Изготовление ключей с выездом по всей Москве
+    .conttxt
+        p 
+            |Допустим, вы приобрели автомобиль только с одним комплектом ключей, 
+            |закажите себе их вторые экземпляры, не откладывая дело в долгий ящик! 
+            |Запасной автоключ всегда пригодится. 
+            |В случае полной утраты всех ключей от автомобиля рекомендуем, не теряя времени, 
+            |воспользоваться нашими услугами. 
+            |Не стоит искушать судьбу – вдруг потерянные ключи достанутся злоумышленникам?
+
+    ul.servicetype-list
+        li
+            a(href="#") Изготовление нового ключа
+        li
+            a(href="#") Изготовление чип ключа
+        li
+            a(href="#") Изготовление дубликата ключа
+        li
+            a(href="#") Изготовление чип ключа
+        li
+            a(href="#") Изготовление дубликата ключа
+        li
+            a(href="#") Изготовление чип ключа
+
+.mapblock
+    h2.maintitle Мастера работают по всей Москве
+    .mapmain#map
+
+.ourteam.container
+    h2.maintitle Фотографии работ наших мастеров
+
+    .team-slider-wrap
+        .team-slider.swiper-container
+            .swiper-wrapper
+                +teamSliderItem('sl-1.jpg', 'ph-1.png', 'Александр')
+                +teamSliderItem('sl-2.jpg', 'ph-2.png', 'Олег')
+                +teamSliderItem('sl-3.jpg', 'ph-1.png', 'Евгений')
+                +teamSliderItem('sl-4.jpg', 'ph-3.png', 'Валентин')
+
+            .swiper-pagination
+
+        .swiper-button-next.team-slider__next
+        .swiper-button-prev.team-slider__prev
+
+.formblock
+    form(action="#").formloan
+        ul.formloan__list
+            li
+                .formloan__sub-title Марка автомобиля
+                .selectcustom
+                    select
+                        option Mersedes
+                        option Audi
+                        option Toyota
+            li
+                .formloan__sub-title Модель автомобиля
+                .selectcustom
+                    select
+                        option A7
+                        option A8
+            li
+                .formloan__sub-title Год выпуска
+                .selectcustom
+                    select
+                        option 1990 г
+                        option 2000 г
+            li
+                .formloan__sub-title Вид неисправности
+                .selectcustom
+                    select
+                        option Изготовление ключа
+                        option тест
+            li
+                button(type="submit").formloan__btn Со скидкой от 10%
+
+        .tabcontent__privacy
+            |Нажимая на кнопку "Бесплатный вызов мастера" я принимаю условия, 
+            |даю согласие на 
+            a(href="#") обработку персональных данных
+
+
+
+
+
+
+
+
+
+
+
+
+

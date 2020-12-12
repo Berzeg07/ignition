@@ -457,7 +457,7 @@
 
 .tabbuttons>li {
     width: 33.33%;
-    padding: 0px 0px 30px 30px;
+    padding: 0px 30px 30px 30px;
     position: relative;
     cursor: pointer;
 
@@ -719,6 +719,57 @@
     font-weight: 600;
 }
 
+.formloan__article {
+    padding-top: 34px;
+    color: #BEB4F0;
+    font-size: 16px;
+
+    a {
+        color: white;
+    }
+}
+
+.formloan__article-mob {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    padding-right: 40px;
+    padding-top: 10px;
+    display: none;
+}
+
+.tabcontent__item {
+    display: none;
+}
+
+.tabcontent__top-mob {
+    display: flex;
+    margin-bottom: 5px;
+    position: relative;
+    display: none;
+
+    li {
+        &:first-child {
+            margin-right: 24px;
+        }
+
+        &:nth-child(2) {
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+        }
+    }
+}
+
+.closetab {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 28px;
+    height: 28px;
+    background: url(../img/close.png) no-repeat center;
+}
+
 @media (max-width: 1599px) {
     .selectcustom .label {
         font-size: 16px;
@@ -733,7 +784,7 @@
     }
 
     .tabbuttons>li {
-        padding: 0px 0px 15px 15px;
+        padding: 0px 15px 15px 15px;
     }
 
     .tabbuttons__item {
@@ -812,16 +863,39 @@
 }
 
 @media (max-width: 699px) {
+    .tabcontent__top-mob {
+        display: flex;
+    }
+
+    .formloan__article-mob {
+        display: block;
+    }
+
+    .formloan__article {
+        display: none;
+    }
+
+    .formloan__btn {
+        max-width: 343px;
+    }
+
+    .formloan__btn:after {
+        display: block;
+        left: 88%;
+    }
+
     .tabblock__title {
         display: none;
     }
 
     .tabblock {
         padding: 0;
+        position: relative;
     }
 
     .tabbuttons {
         display: block;
+        margin-top: -35px;
     }
 
     .tabbuttons>li.is-active:after,
@@ -834,21 +908,34 @@
         background: none;
     }
 
+    .tabbuttons__title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
     .tabbuttons>li {
         border-radius: 30px 30px 0px 0px;
         width: 100%;
         padding: 0;
+        padding-bottom: 30px;
 
         &:first-child {
             background: #6051A9;
+
+            .tabbuttons__title,
+            .priceinfo__price {
+                color: white;
+            }
         }
 
         &:nth-child(2) {
             background: #EBF3DE;
+            margin-top: -30px;
         }
 
         &:nth-child(3) {
             background: #28ABA8;
+            margin-top: -30px;
 
             .priceinfo__price,
             .tabbuttons__title {
@@ -863,7 +950,7 @@
         &:first-child .tabbuttons__img,
         &:nth-child(2) .tabbuttons__img,
         &:last-child .tabbuttons__img {
-            width: 50%;
+            width: 42%;
             text-align: right;
             padding-right: 13px;
         }
@@ -872,6 +959,19 @@
 
     .priceinfo__time {
         margin-top: 7px;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            background: url("../img/arrow-r.png") no-repeat center;
+            opacity: 0.7;
+        }
     }
 
     .tabbuttons__img {
@@ -886,7 +986,7 @@
     .tabbuttons>li:nth-child(2) .tabbuttons__article,
     .tabbuttons>li:first-child .tabbuttons__article,
     .tabbuttons>li:nth-child(3) .tabbuttons__article {
-        width: 50%;
+        width: 58%;
     }
 
     .priceinfo {
@@ -896,5 +996,42 @@
     .priceinfo__time {
         width: 100px;
         justify-content: center;
+    }
+
+    .tabcontent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+        border-radius: 10px 10px 0px 0px;
+        padding-left: 16px;
+        padding-right: 16px;
+        display: none;
+    }
+
+    .tabcontent.wheat {
+        background: #EBF3DE;
+
+        .tabcontent__top-mob li:nth-child(2) {
+            color: black;
+        }
+
+        .formloan__sub-title,
+        .formloan__article-mob {
+            color: #233142;
+        }
+    }
+
+    .tabcontent.green {
+        background: #28ABA8;
+    }
+
+    .formloan__list li {
+        margin-bottom: 15px;
+    }
+
+    .formloan__list>li:last-child {
+        padding-top: 5px;
     }
 }

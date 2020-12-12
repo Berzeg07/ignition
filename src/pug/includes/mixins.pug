@@ -3,36 +3,41 @@ mixin icon(name,mod)
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="/img/svg/sprite.svg#" + name)
 
-mixin tabItem(tabId)
-	.tabcontent__item(id=tabId)
-		ul.formloan__list
-			li
-				.formloan__sub-title Марка автомобиля
-				.selectcustom.selectcustom_car
-					select
-						option Mersedes
-						option Audi
-						option Toyota
-			li
-				.formloan__sub-title Модель автомобиля
-				.selectcustom.selectcustom_car
-					select
-						option A7
-						option A8
-			li
-				.formloan__sub-title Год выпуска
-				.selectcustom.selectcustom_date
-					select
-						option 1990 г
-						option 2000 г
-			li
-				.formloan__sub-title Вид неисправности
-				.selectcustom.selectcustom_key
-					select
-						option Изготовление ключа
-						option тест
-			li
-				button(type="submit").formloan__btn Отправить заявку
+mixin tabItem
+	ul.formloan__list
+		li
+			.formloan__sub-title Марка автомобиля
+			.selectcustom.selectcustom_car
+				select
+					option Mersedes
+					option Audi
+					option Toyota
+		li
+			.formloan__sub-title Модель автомобиля
+			.selectcustom.selectcustom_car
+				select
+					option A7
+					option A8
+		li
+			.formloan__sub-title Год выпуска
+			.selectcustom.selectcustom_date
+				select
+					option 1990 г
+					option 2000 г
+		li
+			.formloan__sub-title Вид неисправности
+			.selectcustom.selectcustom_key
+				select
+					option Изготовление ключа
+					option тест
+		li
+			button(type="submit").formloan__btn Отправить заявку
+
+	.formloan__article
+		|Нажимая на кнопку "Бесплатный вызов мастера" я принимаю условия, даю согласие на 
+		a(href="#") обработку персональных данных
+
+	.formloan__article-mob Бесплатный выезд мастера
 
 mixin teamSliderItem(img, photo, name)
 	.swiper-slide

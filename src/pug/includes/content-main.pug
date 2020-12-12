@@ -4,7 +4,7 @@
         |сделать новый ключ для автомобиля
 
     ul.tabbuttons
-        li.is-active
+        li(data-tab="#tab1")
             .tabbuttons__item
                 .tabbuttons__img
                     img(src="img/key-1.png" width="106" height="130")
@@ -19,7 +19,7 @@
                             .priceinfo__time
                                 b 40 
                                 span мин.
-        li
+        li(data-tab="#tab2")
             .tabbuttons__item
                 .tabbuttons__img
                     img(src="img/key-2.png" width="130" height="130")
@@ -34,7 +34,7 @@
                             .priceinfo__time
                                 b 40  
                                 span мин.
-        li
+        li(data-tab="#tab3")
             .tabbuttons__item
                 .tabbuttons__img
                     img(src="img/key-3.png" width="145" height="130")
@@ -51,9 +51,33 @@
                                 span мин.
 
     form(action="#").formloan.tabcontent
-        +tabItem('tab1')
-        +tabItem('tab2')
-        +tabItem('tab3')
+        .tabcontent__item#tab1
+            ul.tabcontent__top-mob
+                li
+                    img(src="img/key-1.png" width="58" height="75")
+                li
+                    |Новый ключ<br> для автомобиля
+                li
+                    button(type="button").closetab
+            +tabItem
+        .tabcontent__item#tab2
+            ul.tabcontent__top-mob
+                li
+                    img(src="img/key-2.png" width="58" height="75")
+                li
+                    |Новый чип<br> ключ
+                li
+                    button(type="button").closetab
+            +tabItem
+        .tabcontent__item#tab3
+            ul.tabcontent__top-mob
+                li
+                    img(src="img/key-3.png" width="58" height="75")
+                li
+                    |Новый ключ<br> для автомобиля
+                li
+                    button(type="button").closetab
+            +tabItem
 
 .topcont.container
     h1.maintitle Изготовление ключей с выездом по всей Москве

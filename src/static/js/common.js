@@ -20,9 +20,8 @@ $(document).ready(function () {
                 $('.tabcontent').addClass('green')
             }
             $(tab).fadeIn(400);
-
         });
-        $('.tabbuttons li:first').click();
+
         $('.closetab').click(function () {
             $('.tabcontent').removeClass('green').removeClass('wheat')
             $('.tabcontent__item').fadeOut()

@@ -195,39 +195,8 @@
 
 .formblock
     form(action="#").formloan
-        ul.formloan__list
-            li
-                .formloan__sub-title Марка автомобиля
-                .selectcustom
-                    select
-                        option Mersedes
-                        option Audi
-                        option Toyota
-            li
-                .formloan__sub-title Модель автомобиля
-                .selectcustom
-                    select
-                        option A7
-                        option A8
-            li
-                .formloan__sub-title Год выпуска
-                .selectcustom
-                    select
-                        option 1990 г
-                        option 2000 г
-            li
-                .formloan__sub-title Вид неисправности
-                .selectcustom
-                    select
-                        option Изготовление ключа
-                        option тест
-            li
-                button(type="submit").formloan__btn Со скидкой от 10%
-
-        .tabcontent__privacy
-            |Нажимая на кнопку "Бесплатный вызов мастера" я принимаю условия, 
-            |даю согласие на 
-            a(href="#") обработку персональных данных
+        .formblock__title Онлайн заявка
+        +tabItem
 
 
 

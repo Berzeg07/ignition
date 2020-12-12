@@ -1,3 +1,10 @@
 $(document).ready(function () {
-    // alert(1);
+    $('.showmenu').click(function () {
+        $(this).toggleClass('is-active')
+        $('.dropdownmenu').fadeToggle()
+    })
+
+    $('.selectcustom select').selectric()
+
 });
+

@@ -1,51 +1,54 @@
 .tabblock.container
-    .tabblock__title По-настоящему быстрый способ сделать новый ключ для автомобиля
+    .tabblock__title 
+        span По-настоящему быстрый способ 
+        |сделать новый ключ для автомобиля
 
-    .tabbuttons
-        .tabbuttons__item
-            .tabbuttons__img
-                img(src="img/key-1.png" width="106" height="130")
-            .tabbuttons__article
-                .tabbuttons__title Новый ключ для автомобиля
-                ul.priceinfo
-                    li
-                        .priceinfo__price
-                            span от
-                            b 1 200 ₽
-                    li
-                        .priceinfo__time
-                            b ~ 40 
-                            span мин.
-
-        .tabbuttons__item
-            .tabbuttons__img
-                img(src="img/key-2.png" width="130" height="130")
-            .tabbuttons__article
-                .tabbuttons__title Новый чип ключ
-                ul.priceinfo
-                    li
-                        .priceinfo__price
-                            span от
-                            b 1 200 ₽
-                    li
-                        .priceinfo__time
-                            b ~ 40 
-                            span мин.
-
-        .tabbuttons__item
-            .tabbuttons__img
-                img(src="img/key-3.png" width="145" height="130")
-            .tabbuttons__article
-                .tabbuttons__title Ремонт замка зажигания
-                ul.priceinfo
-                    li
-                        .priceinfo__price
-                            span от
-                            b 1 200 ₽
-                    li
-                        .priceinfo__time
-                            b ~ 40 
-                            span мин.
+    ul.tabbuttons
+        li.is-active
+            .tabbuttons__item
+                .tabbuttons__img
+                    img(src="img/key-1.png" width="106" height="130")
+                .tabbuttons__article
+                    .tabbuttons__title Новый ключ<br> для автомобиля
+                    ul.priceinfo
+                        li
+                            .priceinfo__price
+                                span от 
+                                b 1 200 ₽
+                        li
+                            .priceinfo__time
+                                b 40 
+                                span мин.
+        li
+            .tabbuttons__item
+                .tabbuttons__img
+                    img(src="img/key-2.png" width="130" height="130")
+                .tabbuttons__article
+                    .tabbuttons__title Новый чип<br> ключ
+                    ul.priceinfo
+                        li
+                            .priceinfo__price
+                                span от 
+                                b 1 200 ₽
+                        li
+                            .priceinfo__time
+                                b 40  
+                                span мин.
+        li
+            .tabbuttons__item
+                .tabbuttons__img
+                    img(src="img/key-3.png" width="145" height="130")
+                .tabbuttons__article
+                    .tabbuttons__title Ремонт замка<br> зажигания
+                    ul.priceinfo
+                        li
+                            .priceinfo__price
+                                span от 
+                                b 1 200 ₽
+                        li
+                            .priceinfo__time
+                                b 40 
+                                span мин.
 
     form(action="#").formloan.tabcontent
         +tabItem('tab1')

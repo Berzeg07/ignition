@@ -20,7 +20,7 @@
                     a(href="#") Контакты
 
         .header__column
-            button(type="button").btngreen Вызвать мастера
+            button(type="button").btngreen.header__btn Вызвать мастера
 
             ul.phone-block
                 li
@@ -30,10 +30,10 @@
 
     .header__botom
         .header__column
-            button(type="button").menubtn
-            form.search(action="#")
+            button(type="button").menubtn.showmenu
+            form.search.search_wbtn(action="#")
                 input(type="text" placeholder="Например сделать ключ BMW X6").inp-search
-                button(type="submit").btngreen Найти
+                button(type="submit").btngreen.search__btn Найти
 
         .header__column
             ul.header-nav
@@ -45,47 +45,50 @@
                     a(href="#") Ремонт замка зажигания
 
 .dropdownmenu
-    .dropdownmenu__column
-        .dropdownmenu__title Популярные
-        +markList
+    .dropdownmenu__item
+        .dropdownmenu__column
+            .dropdownmenu__title Популярные
+            +markList
 
-    .dropdownmenu__column
-        .dropdownmenu__title Японские
-        +markList
+        .dropdownmenu__column
+            .dropdownmenu__title Японские
+            +markList
 
-    .dropdownmenu__column
-        .dropdownmenu__title Американские
-        +markList
+        .dropdownmenu__column
+            .dropdownmenu__title Американские
+            +markList
 
-    .dropdownmenu__column
-        .dropdownmenu__title Немецкие
-        +markList
+        .dropdownmenu__column
+            .dropdownmenu__title Немецкие
+            +markList
 
-    .dropdownmenu__column
-        .dropdownmenu__title Европейские
-        +markList
+        .dropdownmenu__column
+            .dropdownmenu__title Европейские
+            +markList
 
-    .dropdownmenu__column
-        .dropdownmenu__title Корейские
-        +markList
+        .dropdownmenu__column
+            .dropdownmenu__title Корейские
+            +markList
 
-    .dropdownmenu__column
-        .dropdownmenu__title Китайские
-        +markList
+        .dropdownmenu__column
+            .dropdownmenu__title Китайские
+            +markList
 
 .headermob
     .headermob__column
-        button(type="button").burgermob
-        ul.logo-article
+        button(type="button").burgermob.showmenu
+        ul.logo-article.headermob__logo-article
             li Ключи зажигания
             li изготовление ключей и ремонт замков
 
     .headermob__column
-        ul.phone-block
+        ul.phone-block.phone-block_mob
             li
-                a(href="tel:84952668525").phone-recall 8 495 266-85-25
+                a(href="tel:84952668525").phone-recall.phone-recall_mob 8 495 266-85-25
             li
-                span.phone-article звоните ежедневно 24/7
+                span.phone-article.phone-article_mob звоните ежедневно 24/7
+
+        button(type="button").btngreen.headermob__btn Вызов мастера
 
     .headermob__column
         form(action="#").searchhmob

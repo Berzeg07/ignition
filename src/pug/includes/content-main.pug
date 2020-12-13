@@ -83,26 +83,25 @@
     h1.maintitle Изготовление ключей с выездом по всей Москве
     .conttxt
         p Допустим, вы приобрели автомобиль только с одним комплектом ключей, 
-        |закажите себе их вторые экземпляры, не откладывая дело в долгий ящик! 
-        |Запасной автоключ всегда пригодится. В случае полной утраты всех ключей от 
-        |автомобиля рекомендуем, не теряя времени, воспользоваться нашими услугами. 
-        |Не стоит искушать судьбу – вдруг потерянные ключи достанутся злоумышленникам?
+            |закажите себе их вторые экземпляры, не откладывая дело в долгий ящик! 
+            |Запасной автоключ всегда пригодится. В случае полной утраты всех ключей от 
+            |автомобиля рекомендуем, не теряя времени, воспользоваться нашими услугами. 
+            |Не стоит искушать судьбу – вдруг потерянные ключи достанутся злоумышленникам?
 
+.mark-slider-wrap
     h2.maintitle Ключи для всех популярных моделей автомобилей
+    .mark-slider.swiper-container
+        .swiper-wrapper
+            +markSlides('car-1.png', 'Audi')
+            +markSlides('car-2.png', 'Bmw')
+            +markSlides('car-3.png', 'Ford')
+            +markSlides('car-4.png', 'Honda')
+            +markSlides('car-5.png', 'Mersedes')
 
-    .mark-slider-wrap
-        .mark-slider.swiper-container
-            .swiper-wrapper
-                +markSlides('car-1.png', 'Audi')
-                +markSlides('car-2.png', 'Bmw')
-                +markSlides('car-3.png', 'Ford')
-                +markSlides('car-4.png', 'Honda')
-                +markSlides('car-5.png', 'Mersedes')
+        .swiper-pagination
 
-            .swiper-pagination
-
-        .swiper-button-next.mark-slider__next
-        .swiper-button-prev.mark-slider__prev
+    .swiper-button-next.mark-slider__next
+    .swiper-button-prev.mark-slider__prev
 
 .serviceblock.container
     h2.maintitle Наши услуги и стоимость
@@ -141,14 +140,18 @@
             table.tableservice
                 thead
                     tr
-                        th Наименование услуги
-                        th Стоимость
-                        th Время ремонта
+                        th 
+                            span Наименование услуги
+                        th 
+                            span Стоимость
+                        th 
+                            span Время ремонта
+                        th
                 tbody
                     - for(var x = 0; x < 14; x++)
                         +serviceTable
 
-.aboutservice
+.aboutservice.container
     h2.maintitle Изготовление ключей с выездом по всей Москве
     .conttxt
         p 
@@ -174,7 +177,7 @@
             a(href="#") Изготовление чип ключа
 
 .mapblock
-    h2.maintitle Мастера работают по всей Москве
+    h2.maintitle.container Мастера работают по всей Москве
     .mapmain#map
 
 .ourteam.container
@@ -186,7 +189,7 @@
                 +teamSliderItem('sl-1.jpg', 'ph-1.png', 'Александр')
                 +teamSliderItem('sl-2.jpg', 'ph-2.png', 'Олег')
                 +teamSliderItem('sl-3.jpg', 'ph-1.png', 'Евгений')
-                +teamSliderItem('sl-4.jpg', 'ph-3.png', 'Валентин')
+                +teamSliderItem('sl-4.jpg', 'ph-2.png', 'Валентин')
 
             .swiper-pagination
 
@@ -194,6 +197,7 @@
         .swiper-button-prev.team-slider__prev
 
 .formblock
+    h2.maintitle.maintitle_form Онлайн заявка на ремонт
     form(action="#").formloan
         .formblock__title Онлайн заявка
         +tabItem

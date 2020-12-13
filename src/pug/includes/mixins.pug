@@ -57,9 +57,11 @@ mixin teamSliderItem(img, photo, name)
 							.team-slider__star
 								img(src="img/star.png" width="20" height="20")
 								b 4.8
+
 						li
 							.team-slider__rev
 								img(src="img/rev-icon.png" width="20" height="20")
+								span 12 отзывов
 
 			.team-slider__article 
 				|Специалисты по ремонту широкого профиля с опытом работы более 10 лет. 
@@ -86,19 +88,20 @@ mixin markSlides(img, name)
 			.mark-slider__img
 				img(src="img/" + img width="200" height="125")
 
-			a(href="#").mark-slider__link= name
+			.mark-slider__link
+				a(href="#").mark-slider__link= name
 
 			ul.priceinfo
 				li
 					.priceinfo__price
-						span от
+						span от 
 						b 1 200 ₽
 				li
 					.priceinfo__time
-						b ~ 40 
+						b 40 
 						span мин.
 
-			button(type="buton") Вызвать мастера
+			button(type="buton").btngreen.mark-slider__btn Вызвать мастера
 
 mixin markList
 	ul.mark-list

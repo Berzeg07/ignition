@@ -1,0 +1,100 @@
+.topcont.container
+    h1.maintitle Изготовление ключей автомобиля Mercedes
+    .conttxt
+        p Допустим, вы приобрели автомобиль только с одним комплектом ключей, закажите себе их вторые экземпляры, не откладывая дело в долгий ящик! Запасной автоключ всегда пригодится. В случае полной утраты всех ключей от автомобиля рекомендуем, не теряя времени, воспользоваться нашими услугами. Не стоит искушать судьбу – вдруг потерянные ключи достанутся злоумышленникам?
+
+.serviceblock.container
+    .serviceblock__item.serviceblock__item_page
+        .serviceblock__column
+            ul.service-list.service-list_page
+                li.service-list__item
+                    .service-list__img
+                        img(src="img/half-1.png")
+
+                    .service-list__article
+                        .service-list__title Новый ключ
+                        .service-list__sub-title для Mersedes
+                        .service-list__logo
+                            img(src="img/mers.png" width="60" height="60")
+                    .service-list__action
+                        span Цены ниже диллеров на 
+                        b 40%
+
+        .serviceblock__column
+            table.tableservice
+                thead
+                    tr
+                        th 
+                            span Наименование услуги
+                        th 
+                            span Стоимость
+                        th 
+                            span Время ремонта
+                        th
+                tbody
+                    - for(var x = 0; x < 4; x++)
+                        +serviceTable
+
+.ourteam.container
+    h2.maintitle Фотографии работ наших мастеров
+
+    .team-slider-wrap
+        .team-slider.swiper-container
+            .swiper-wrapper
+                +teamSliderItem('sl-1.jpg', 'ph-1.png', 'Александр')
+                +teamSliderItem('sl-2.jpg', 'ph-2.png', 'Олег')
+                +teamSliderItem('sl-3.jpg', 'ph-1.png', 'Евгений')
+                +teamSliderItem('sl-4.jpg', 'ph-2.png', 'Валентин')
+
+            .swiper-pagination
+
+        .swiper-button-next.team-slider__next
+        .swiper-button-prev.team-slider__prev
+
+.formblock
+    h2.maintitle.maintitle_form Онлайн заявка на ремонт
+    form(action="#").formloan
+        .formblock__title Онлайн заявка
+        +tabItem
+
+.aboutservice.container
+    h2.maintitle Изготовление ключей с выездом по всей Москве
+    .conttxt
+        p 
+            |Допустим, вы приобрели автомобиль только с одним комплектом ключей, 
+            |закажите себе их вторые экземпляры, не откладывая дело в долгий ящик! 
+            |Запасной автоключ всегда пригодится. 
+            |В случае полной утраты всех ключей от автомобиля рекомендуем, не теряя времени, 
+            |воспользоваться нашими услугами. 
+            |Не стоит искушать судьбу – вдруг потерянные ключи достанутся злоумышленникам?
+
+    ul.servicetype-list
+        li
+            a(href="#") Изготовление нового ключа
+        li
+            a(href="#") Изготовление чип ключа
+        li
+            a(href="#") Изготовление дубликата ключа
+        li
+            a(href="#") Изготовление чип ключа
+        li
+            a(href="#") Изготовление дубликата ключа
+        li
+            a(href="#") Изготовление чип ключа
+
+.mapblock
+    h2.maintitle.container Мастера работают по всей Москве
+    .mapmain#map
+
+
+
+
+
+
+
+
+
+
+
+
+
